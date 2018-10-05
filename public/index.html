@@ -3,41 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <title>Title</title>
+    <script type="text/javascript" src="/index.js" ></script>
+    <title>Статьи</title>
 </head>
 <body>
- <p>Hello, World!!!</p>
-    <input type="button" value="get" onclick="getArticles()">
-    <div id="articles">a</div>
+    <div>
+        <label for="sortOrders">Сортировка статей</label>
+        <br/>
+        <select id="sortOrders" onchange="sortChanged()">
+            <option value="asc">По возрастанию даты</option>
+            <option value="desc" selected="selected">По убыванию даты</option>
+        </select>
+        <input type="button" value="Добавить статью" onclick="goToForm()">
+    </div>
+    <div id="articles"></div>
 </body>
-<script>
-    function getArticles() {
-	    var url = "http://localhost:3000/api/articles/readall";
-	    console.log("file");
-	    var data = JSON.stringify({	});
-	    var xhr = new XMLHttpRequest();
-	    xhr.open("POST", url, true);
-	    xhr.setRequestHeader("Content-Type", "application/json");
-	    xhr.onreadystatechange = function () {
-		    if (xhr.readyState === 4 && xhr.status === 200) {
-			    console.log("send");
-			    // var json = JSON.parse(xhr.responseText);
-			    var json = xhr.responseText;
-			    alert(json);
-			    var myNode = document.getElementById('articles');
-			    alert(json);
-			    myNode.innerHTML = json;
-			    // if (myNode.firstChild) {
-			    //     myNode.replaceChild(p, myNode.firstChild);
-			    // }
-			    // else
-			    // {
-			    //     myNode.appendChild(p);
-			    // }
-		    }
-        };
-	    xhr.send(data);
-    }
-
-</script>
 </html>

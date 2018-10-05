@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/form.js" ></script>
+    <title>Добавление статьи</title>
 </head>
 <body>
-    <h1>Form</h1>
+    <div>
+        <label for="title-input">Название статьи</label>
+        <textarea id="title-input"></textarea>
+        <br>
+        <label for="author-input">Автор статьи</label>
+        <textarea id="author-input"></textarea>
+        <br>
+        <label for="text-input">Текст статьи</label>
+        <textarea id="text-input"></textarea>
+        <br>
+        <input type="button" value="Добавить статью" onclick="createArticle()">
+    </div>
+    <input type="button" value="Вернуться к просмотру статей" onclick="goToIndex()">
 </body>
 </html>
