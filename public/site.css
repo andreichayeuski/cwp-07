@@ -1,0 +1,14 @@
+
+#comments
+{
+    display: none;
+}
+#comments.visible
+{
+    display: block;
+}
+
+.btn.hidden
+{
+    display: none;
+}

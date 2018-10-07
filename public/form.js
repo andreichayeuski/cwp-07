@@ -5,7 +5,6 @@ function goToIndex()
 
 function createArticle() {
 	let url = "http://localhost:3000/api/articles/create";
-	console.log("create");
 	let title = document.getElementById('title-input').value;
 	let author = document.getElementById('author-input').value;
 	let text = document.getElementById('text-input').value;
