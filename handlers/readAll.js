@@ -5,7 +5,7 @@ const defaultValues = {
 	"sortOrder": "desc",
 	"page": "1",
 	"limit": "10",
-	"includeDeps": false
+	"includeDeps": true
 };
 let compareField = defaultValues.sortField;
 let compareOrder = defaultValues.sortOrder;

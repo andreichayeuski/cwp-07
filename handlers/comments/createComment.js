@@ -6,7 +6,7 @@ const ErrorObject = { code: 400, message: 'Invalid request' };
 
 module.exports.createComment = function(req, res, payload, cb) {
 	if (valid.valid(req.url, payload) === true) {
-		let ind = articles.findIndex(i => i.id === payload.articleId);
+		let ind = articles.findIndex(i => i.id == payload.articleId);
 		if (ind !== -1) {
 			if (articles[ind].comments.length !== 0) {
 				payload.id = articles[ind].comments[articles[ind].comments.length - 1].id + 1
@@ -14,6 +14,7 @@ module.exports.createComment = function(req, res, payload, cb) {
 				payload.id = 0;
 			}
 			articles[ind].comments.push(payload);
+			console.log(payload);
 			fs.writeFile("articles.json", JSON.stringify(articles), "utf8", function () {
 			});
 			log.log(req.url, payload);

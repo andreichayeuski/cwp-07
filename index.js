@@ -21,13 +21,7 @@ const handlers = {
 	'/api/articles/delete': deleteArticle.deleteArticle,
 	'/api/comments/create': createComment.createComment,
 	'/api/comments/delete': deleteComment.deleteComment,
-	'/api/logs': logs.getLogs,
-	'/': publicHandler.getIndexHTML,
-	'/index.html': publicHandler.getIndexHTML,
-	'/form.html': publicHandler.getFormHTML,
-	'/app.js': publicHandler.getAppJS,
-	'/form.js': publicHandler.getFormJS,
-	'/site.css': publicHandler.getSiteCSS
+	'/api/logs': logs.getLogs
 };
 
 const server = http.createServer((req, res) => {

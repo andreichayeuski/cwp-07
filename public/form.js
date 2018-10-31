@@ -14,7 +14,7 @@ function createArticle() {
 		"author" : author,
 		"text" : text,
 		"date" : today,
-		"comments" : "{}"
+		"comments" : []
 	};
 	data = JSON.stringify(data);
 	var xhr = new XMLHttpRequest();
